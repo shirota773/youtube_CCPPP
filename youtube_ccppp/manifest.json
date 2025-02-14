@@ -1,0 +1,21 @@
+{
+  "manifest_version": 1,
+  "name": "YouTube-CCPPP(Comment copy&paste+)",
+  "version": "1.0",
+  "permissions": [""],
+  "host_permissions": ["https://www.youtube.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["inject.js"],
+      "matches": ["https://www.youtube.com/*"],
+      "extension_ids": []
+    }
+  ]
+}
